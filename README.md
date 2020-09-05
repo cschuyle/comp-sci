@@ -27,6 +27,12 @@ Scripting
 - What's a scripting language versus other languages?
 - What is scripting used for
 
+
+Parsing
+- Regular expressions
+- ANTLR
+- Lex, Yacc
+
 Patterns
 - GOF (Gang of Four) book.
     - https://en.wikipedia.org/wiki/Design_Patterns
@@ -51,7 +57,8 @@ Procedural vs Declarative programming
 - Is SQL Declarative?
 - How about JSON
 
-## Data storage
+
+## Data storage, Databases, Datastores
 
 ### File Systems
 - Linux, MacOS, Windows filesystems
@@ -61,7 +68,20 @@ Procedural vs Declarative programming
 
 ### RDBMS
 
-Learn one, maybe MySQL (MariaDB), PostgreSQL, Amazon RDS
+Learn one (meaning, also learn SQL), maybe MySQL (MariaDB), PostgreSQL, Amazon RDS
+
+What is ACID
+
+What are transactions
+
+_advanced_ What are transaction isolation levels
+
+JDBC
+
+JPA
+
+ORM
+- Hibernate
 
 ### NoSQL
 
@@ -69,7 +89,12 @@ Learn a couple from a couple families:
 
 - Key-value stores: Redis, Cassandra, AWS DynamoDB
 - Document Stores: MongoDB
-- Graph databases: Neo4j
+- Graph databases: Neo4j, Gun
+
+Other interesting DBs that don't really fit into any of the above
+- ArangoDB
+- FoundationDB
+- Datomic
 
 ### Information retrieval
 - TF/IDF, word vector space 
@@ -79,6 +104,7 @@ Learn a couple from a couple families:
 - _advanced_ Know what LDAP is and be able to describe it
 - _advanced_ File structures (data structures on disk)
 - _advanced_ RDF, Semantic Web
+
 
 ## Development Methodologies
 
@@ -94,6 +120,7 @@ XP
 
 Lean
 
+
 ## Development practices
 
 Pair Programming
@@ -107,6 +134,7 @@ Fast Iterative Development
 Git Flow and code reviews
 
 Trunk-based development, branching
+
 
 ## Tools
 
@@ -155,15 +183,32 @@ Servers
 
 Distributed Systems
 - How are Microservices different than a Distributed System?
-
-Security
+- Stuff that's hard in distributed systems
+    - Security
+    - Network latency
+    - Network errors
+    - Distributed transactions
+    - API versioning
+    
+Security, Encoding, Encryption
 - What's a secret? A Vault?
-
-Networking
+- OAuth
+- Access token
+- SSO
+- HTTPS, TLS
+- SSH
+- base64, url-encoding, html-encoding
+- Encoding versus encryption
+- Hash versus cyptographic hash
+- Symmetric versus one-way hash
 
 REST APIs
+- sdtandard REST CRUD operations: methods, paths, and payloads
+- HTTP methods/actions/verbs and why they';re important for REST
+- Why is plain CRUD inefficient in complicated apps?
 
-MVC, MVVC, layered, hexagonal, DDD, ERDs, UML
+Architecture:
+- MVC, MVVC, layered, hexagonal, DDD, ERDs, UML
 
 Testing
 - Testing Pyramid
@@ -175,6 +220,17 @@ Map-Reduce
 Dependency Injection, IOC
 - Spring
 - Guice (Google loves this)
+
+Concurrency
+- Threads, Fibers, Green Threads
+- Frameworks: plain old thread APIs, Akka, Erlang, Java Reactive, Spring WebFlux
+
+Networking
+- TCP/IP
+- UDP
+- DNS, nameservers
+- IP, IPv6
+
 
 ## Cloud
 
@@ -195,9 +251,6 @@ Serverless
 
 Bits & Bytes, other encoding things
 - What does cryptographic vs non-cryptographic mean?
-- base64
-- sha, sha256 ........ ?
-- what's a cryptographic vs non-cryptographic hash?
 - What power of 2 is about a million?
 - What does `chmod 0755 whatever.txt` actually mean?
 - What is the maximum value of a byte ?
@@ -221,6 +274,7 @@ Shells, Environment Variables, Permissions, command line tools, background and f
 file and device I/O: blocking, non-blocking
 - <https://www.youtube.com/watch?v=bzkRVzciAZg>
 
+
 ## Advanced Topics
 
 Big Data
@@ -232,8 +286,10 @@ Deep Learning
 Quantum Computing
 
 "Esoteric" programming languages
-- LISP
+- LISP (check out Clojure)
 - Haskell
 - Prolog
-- APL
+- APL (and its modern successor, J)
 - ML, OCaml
+- Erlang
+
